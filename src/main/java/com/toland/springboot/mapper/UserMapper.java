@@ -1,8 +1,7 @@
 package com.toland.springboot.mapper;
 
 import com.toland.springboot.entity.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -11,4 +10,13 @@ public interface UserMapper
 {
     @Select("SELECT * FROM user_info")
     List<User> findAll();
+    @Insert("INSERT INTO user_info(username,password,nickname,email,phone,address) VALUES (#{username}, #{password}, #{nickname},#{email}, #{phone}, #{address})")
+    int insert(User user);
+
+    @Delete("DELETE FROM user_info WHERE id = #{id}")   //这个id与下一行的id一一对应
+    Integer deleteById(@Param("id") Integer id);
+
+    int update(User user);
+
+
 }

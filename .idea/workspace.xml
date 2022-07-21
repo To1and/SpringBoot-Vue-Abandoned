@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="328aa32b-114a-4df5-a143-28876d070d96" name="变更" comment="Spring Boot集成MyBatis实现数据查询" />
+    <list default="true" id="328aa32b-114a-4df5-a143-28876d070d96" name="变更" comment="Spring Boot实现增删改查">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,27 +35,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;79d866204d4a64387f430175eb493199&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "问题",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "79d866204d4a64387f430175eb493199",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
-  <component name="RunManager" selected="npm.serve">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.SpringBootVueStudyProjectApplication">
+    <configuration name="SpringBoot-Vue Study Project中的com.toland.springboot.service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringBoot-Vue Study Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.toland.springboot.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.toland.springboot.service" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootVueStudyProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="SpringBoot-Vue Study Project" />
@@ -72,9 +97,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JUnit.SpringBoot-Vue Study Project中的com.toland.springboot.service" />
       <item itemvalue="npm.serve" />
       <item itemvalue="Spring Boot.SpringBootVueStudyProjectApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringBoot-Vue Study Project中的com.toland.springboot.service" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,6 +119,15 @@
       <workItem from="1658392095496" duration="630000" />
       <workItem from="1658392787528" duration="215000" />
       <workItem from="1658393044252" duration="254000" />
+      <workItem from="1658393342785" duration="2647000" />
+      <workItem from="1658396198130" duration="163000" />
+      <workItem from="1658396419536" duration="4145000" />
+      <workItem from="1658405185170" duration="1986000" />
+      <workItem from="1658407227245" duration="236000" />
+      <workItem from="1658408620680" duration="978000" />
+      <workItem from="1658456101156" duration="1761000" />
+      <workItem from="1658464955090" duration="2001000" />
+      <workItem from="1658467076809" duration="7014000" />
     </task>
     <task id="LOCAL-00001" summary="Spring Boot集成MyBatis实现数据查询">
       <created>1658392147307</created>
@@ -103,7 +143,35 @@
       <option name="project" value="LOCAL" />
       <updated>1658392886418</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sping Boot实现增删改查">
+      <created>1658407147332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658407147332</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Spring Boot实现增删改查">
+      <created>1658456280051</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658456280051</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Spring Boot实现增删改查">
+      <created>1658471822769</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658471822769</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Spring Boot实现增删改查">
+      <created>1658471839036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658471839036</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +188,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="github/master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -138,6 +206,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Spring Boot集成MyBatis实现数据查询(Finished)" />
     <MESSAGE value="Spring Boot集成MyBatis实现数据查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Boot集成MyBatis实现数据查询" />
+    <MESSAGE value="Sping Boot实现增删改查" />
+    <MESSAGE value="Spring Boot实现增删改查" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Boot实现增删改查" />
   </component>
 </project>
