@@ -18,5 +18,10 @@ public interface UserMapper
 
     int update(User user);
 
+    @Select("SELECT * FROM user_info LIMIT #{pageNumber},#{pageSize}")
+    List<User> selectPage(Integer pageNumber,Integer pageSize);
+
+    @Select("SELECT COUNT(*) FROM user_info")
+    Integer selectTotal();
 
 }

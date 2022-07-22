@@ -1,50 +1,51 @@
 # I. 前期配置
+
 + ## Maven配置阿里云仓库（加快依赖下载速度）
 
-```xml
-<repositories>
-    <repository>
-        <id>nexus-aliyun</id>
-        <name>nexus-aliyun</name>
-        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-
-<pluginRepositories>
-    <pluginRepository>
-        <id>public</id>
-        <name>aliyun nexus</name>
-        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </pluginRepository>
-</pluginRepositories>
-```
+	```xml
+	<repositories>
+	    <repository>
+	        <id>nexus-aliyun</id>
+	        <name>nexus-aliyun</name>
+	        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
+	
+	<pluginRepositories>
+	    <pluginRepository>
+	        <id>public</id>
+	        <name>aliyun nexus</name>
+	        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </pluginRepository>
+	</pluginRepositories>
+	```
 
 
 + ## 用YML替代properties配置数据源
 
-```yaml
-server:
-  port: 9090
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/testdb?serverTimezone=GMT%2b8
-    username: toland
-    password: 990315
-```
+    ```yaml
+    server:
+      port: 9090
+    
+    spring:
+      datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/testdb?serverTimezone=GMT%2b8
+        username: toland
+        password: 990315
+    ```
 
 ---
 
@@ -256,4 +257,30 @@ spring:
 
 ---
 
-+ 
+# IV. 实现分页查询
+
++ ## 使用方法
+
+  1. 
++ ## ___com.toland.springboot.Controller	UserController.java___
+
+  1. 追加分页查询方法。使用___@RequestParam___，其接口路径为_/user/page?pageNumber=1&pageSize=10_。
+  
+     ```java
+     @GetMapping("/page")
+     public List<User> findPage(@RequestParam Integer pageNumber, @RequestParam Integer pageSize)    //实现分页查询，接收页面数与页面大小两个数据
+     {   //limit的第一个参数 = (pageNumber - 1) * pageSize,其原理来源于MySQL语句
+         //limit的第二个参数 = pageSize
+         pageNumber = pageNumber - 1 * pageSize;
+         userMapper.selectPage(pageNumber, pageSize)
+     }
+     ```
+
++ ## ___com.toland.springboot.mapper	UserMapper.java___
+
+  1. 使用@Select实现分页查询
+
+     ```java
+     @Select("SELECT * FROM user_info LIMIT #{pageNumber},#{pageSize}")
+     List<User> selectPage(Integer pageNumber,Integer pageSize);
+     ```
