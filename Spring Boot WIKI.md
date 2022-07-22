@@ -1,50 +1,51 @@
 # I. 前期配置
+
 + ## Maven配置阿里云仓库（加快依赖下载速度）
 
-```xml
-<repositories>
-    <repository>
-        <id>nexus-aliyun</id>
-        <name>nexus-aliyun</name>
-        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-
-<pluginRepositories>
-    <pluginRepository>
-        <id>public</id>
-        <name>aliyun nexus</name>
-        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </pluginRepository>
-</pluginRepositories>
-```
+	```xml
+	<repositories>
+	    <repository>
+	        <id>nexus-aliyun</id>
+	        <name>nexus-aliyun</name>
+	        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
+	
+	<pluginRepositories>
+	    <pluginRepository>
+	        <id>public</id>
+	        <name>aliyun nexus</name>
+	        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </pluginRepository>
+	</pluginRepositories>
+	```
 
 
 + ## 用YML替代properties配置数据源
 
-```yaml
-server:
-  port: 9090
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/testdb?serverTimezone=GMT%2b8
-    username: toland
-    password: 990315
-```
+    ```yaml
+    server:
+      port: 9090
+    
+    spring:
+      datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/testdb?serverTimezone=GMT%2b8
+        username: toland
+        password: 990315
+    ```
 
 ---
 
@@ -256,4 +257,86 @@ spring:
 
 ---
 
-+ 
+# IV. 实现分页查询
+
++ ## 使用方法
+
+  1. 
+  
++ ## ___com.toland.springboot.Controller	UserController.java___
+
+  1. 追加分页查询方法。使用___@RequestParam___，其接口路径为_/user/page?pageNumber=1&pageSize=10_。
+
+     ```java
+     @GetMapping("/page")
+     public List<User> findPage(@RequestParam Integer pageNumber, @RequestParam Integer pageSize)    //实现分页查询，接收页面数与页面大小两个数据
+     {   //limit的第一个参数 = (pageNumber - 1) * pageSize,其原理来源于MySQL语句
+         //limit的第二个参数 = pageSize
+         pageNumber = pageNumber - 1 * pageSize;
+         userMapper.selectPage(pageNumber, pageSize)
+     }
+     ```
+
+  2. 对以上方法进行扩充，改写方法，扩充一个返回值代表总条目数
+
+     ```java
+     @GetMapping("/page")   //接口路径：/user/page?pageNumber=1&pageSize=10
+     public Map<String, Object> findPage(@RequestParam Integer pageNumber, @RequestParam Integer pageSize)    //实现分页查询，接收页面数与页面大小两个数据
+     {
+         pageNumber = (pageNumber - 1) * pageSize;//limit的第一个参数 = (pageNumber - 1) * pageSize,其原理来源于MySQL语句
+     
+         List<User> data = userMapper.selectPage(pageNumber, pageSize);//获得查询信息
+     
+         Integer total = userMapper.selectTotal();//获得总条目数量
+     
+         Map<String, Object> res = new HashMap<>();
+         res.put("data", data);
+         res.put("total", total);
+     
+         return res;
+     ```
+
++ ## ___com.toland.springboot.mapper	UserMapper.java___
+
+  1. 使用@Select实现分页查询
+
+     ```java
+     @Select("SELECT * FROM user_info LIMIT #{pageNumber},#{pageSize}")
+     List<User> selectPage(Integer pageNumber,Integer pageSize);
+     ```
+
+  2. 使用@Select实现获取总条目数
+
+     ```java
+     @Select("SELECT COUNT(*) FROM user_info")
+     Integer selectTotal();
+     ```
+
++ ## ___com.toland.springboot.config	CorsConfig.java___
+
+  1. 编写一个类用于实现跨域
+
+     ```java
+     @Configuration
+     public class CorsConfig
+     {
+         //跨域请求最大有效时长，此处默认为为1天
+         private static final long MAX_AGE = 24 * 60 * 60;
+     
+         @Bean
+         public CorsFilter corsFilter()
+         {
+             UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+             CorsConfiguration corsConfiguration = new CorsConfiguration();
+             corsConfiguration.addAllowedOrigin("http://localhost:8080");//设置访问源地址
+             corsConfiguration.addAllowedHeader("*");//设置访问源请求头
+             corsConfiguration.addAllowedMethod("*");//设置访问源请求方法
+             corsConfiguration.setMaxAge(MAX_AGE);
+             source.registerCorsConfiguration("/**", corsConfiguration);//对接口配置跨域设置
+             return new CorsFilter(source);
+         }
+     }
+     ```
+
+---
+

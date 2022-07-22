@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="328aa32b-114a-4df5-a143-28876d070d96" name="变更" comment="Spring Boot实现增删改查" />
+    <list default="true" id="328aa32b-114a-4df5-a143-28876d070d96" name="变更" comment="Spring Boot实现分页查询">
+      <change afterPath="$PROJECT_DIR$/Spring Boot WIKI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vue WIKI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WIKI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/main.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +60,7 @@
     &quot;project.structure.last.edited&quot;: &quot;问题&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;79d866204d4a64387f430175eb493199&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -60,21 +70,12 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CodeSpace\SpringBoot-Vue Study Project\vue\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.SpringBootVueStudyProjectApplication">
-    <configuration name="SpringBoot-Vue Study Project中的com.toland.springboot.service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpringBoot-Vue Study Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.toland.springboot.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.toland.springboot.service" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringBootVueStudyProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="SpringBoot-Vue Study Project" />
@@ -94,15 +95,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.SpringBoot-Vue Study Project中的com.toland.springboot.service" />
       <item itemvalue="npm.serve" />
       <item itemvalue="Spring Boot.SpringBootVueStudyProjectApplication" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.SpringBoot-Vue Study Project中的com.toland.springboot.service" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -124,7 +119,12 @@
       <workItem from="1658408620680" duration="978000" />
       <workItem from="1658456101156" duration="1761000" />
       <workItem from="1658464955090" duration="2001000" />
-      <workItem from="1658467076809" duration="7079000" />
+      <workItem from="1658467076809" duration="15845000" />
+      <workItem from="1658489686392" duration="179000" />
+      <workItem from="1658489891150" duration="320000" />
+      <workItem from="1658490317613" duration="723000" />
+      <workItem from="1658491064737" duration="3125000" />
+      <workItem from="1658496267532" duration="1894000" />
     </task>
     <task id="LOCAL-00001" summary="Spring Boot集成MyBatis实现数据查询">
       <created>1658392147307</created>
@@ -182,11 +182,50 @@
       <option name="project" value="LOCAL" />
       <updated>1658479584348</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Spring Boot实现增删改查">
+      <created>1658479833124</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658479833124</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Spring Boot实现增删改查">
+      <created>1658480021112</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658480021112</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Spring Boot实现分页查询">
+      <created>1658487399036</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658487399036</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Spring Boot实现分页查询">
+      <created>1658488302418</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658488302418</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -199,7 +238,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -219,6 +258,7 @@
     <MESSAGE value="Spring Boot集成MyBatis实现数据查询" />
     <MESSAGE value="Sping Boot实现增删改查" />
     <MESSAGE value="Spring Boot实现增删改查" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Boot实现增删改查" />
+    <MESSAGE value="Spring Boot实现分页查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Boot实现分页查询" />
   </component>
 </project>

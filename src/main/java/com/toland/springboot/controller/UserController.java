@@ -6,7 +6,7 @@ import com.toland.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/user")
@@ -31,10 +31,25 @@ public class UserController
     }
 
     @GetMapping
-    public List<User> index()   //实现查询所有数据
+    public List<User> findAll()   //实现查询所有数据
     {
-        List<User> all = userMapper.findAll();
-        return all;     //返回全部数据
+        return userMapper.findAll();     //返回全部数据
+    }
+
+    @GetMapping("/page")   //接口路径：/user/page?pageNumber=1&pageSize=10
+    public Map<String, Object> findPage(@RequestParam Integer pageNumber, @RequestParam Integer pageSize)    //实现分页查询，接收页面数与页面大小两个数据
+    {
+        pageNumber = (pageNumber - 1) * pageSize;//limit的第一个参数 = (pageNumber - 1) * pageSize,其原理来源于MySQL语句
+
+        List<User> data = userMapper.selectPage(pageNumber, pageSize);//获得查询信息
+
+        Integer total = userMapper.selectTotal();//获得总条目数量
+
+        Map<String, Object> res = new HashMap<>();
+        res.put("data", data);
+        res.put("total", total);
+
+        return res;
     }
 
 

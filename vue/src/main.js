@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import App from '../../../vue-Completed/src/App.vue'
+import router from '../../../vue-Completed/src/router'
+import store from '../../../vue-Completed/src/store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import './assets/gloable.css'
+import '../../../vue-Completed/src/assets/gloable.css'
 import request from "@/utils/request";
 
 // main.js全局注册
