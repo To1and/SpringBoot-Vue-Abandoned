@@ -340,3 +340,330 @@
 
 ---
 
+# V. 集成Mybatis-Plus和SwaggerUI
+
++ ## 前置工作
+
+  1. 在pom.xml添加Mybatis-Plus依赖
+
+     ```xml
+     <dependency>
+         <groupId>com.baomidou</groupId>
+         <artifactId>mybatis-plus-boot-starter</artifactId>
+         <version>最新版本</version>
+     </dependency>
+     ```
+
+  2. 由于SQL已经被MybatisPlus接管，在application.yml中需要更换配置，更改后为
+
+     ```yaml
+     mybatis:
+         mapper-locations: classpath:mapper/*.xml
+     #    configuration:
+     #        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+     
+     mybatis-plus:
+         configuration:
+             log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+     ```
+
+     
+
++ ## ___com.toland.springboot.config	MybatisPlusConfig___.java
+
+  1. 添加一个配置类用以配置MybatisPlus，在这里使用了___@MapperScan___这个注解，便可以替代，即删除___UserMapper.java___中的@Mapper注解
+  
+     ```java
+     @Configuration
+     @MapperScan("com.toland.springboot.mapper")
+     public class MybatisPlusConfig
+     {
+         @Bean
+         public MybatisPlusInterceptor mybatisPlusInterceptor() {
+             MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+             interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
+             return interceptor;
+         }
+     
+     }
+     ```
+
++ ## ___com.toland.springboot.Service	UserService.java___
+
+  1. 声明一个继承关系
+
+     ```java
+     @Service
+     public class UserService extends ServiceImpl<UserMapper, User>
+     {
+         ...
+     }
+     ```
+
+  2. 由于继承的ServiceImpl类中已有save方法，所以需要将其重写，注释掉当前该类内所有内容。
+
+  3. 新增saveUser方法作为其替代，且该方法内使用了来自于ServiceImpl父类内的saveOrUpdate方法，作用等同于之前的insert和update方法的组合
+
+     ```java
+     public boolean saveUser(User user)
+     {
+         return saveOrUpdate(user);//使用MyBatisPlus提供的方法，返回值为布尔型，可判断成功失败
+     }
+     ```
+
+     4.在后面利用ServiceImpl类内的方法更新了UserController内的所有方法后，可以将UserService类内所有方法删除
+
++ ## ___com.toland.springboot.mapper	UserMapper.java___
+
+  1. 声明一个继承关系
+
+     ```java
+     public interface UserMapper extends BaseMapper<User>
+     {
+     	...
+     }
+     ```
+
+  2. 4.在后面利用ServiceImpl类内的方法更新了UserController内的所有方法后，可以将UserMapper类内所有方法删除
+
++ ## ___com.toland.springboot.Controller	UserController.java___
+
+  1. 使用UserService继承的ServiceImpl类中的方法，更新saveOrUpdateUserInfo方法
+
+     ```java
+         //实现新增或者更新数据
+         @PostMapping
+         public boolean saveOrUpdateUserInfo(@RequestBody User user)
+         {
+             return userService.saveOrUpdate(user);
+         }
+     ```
+
+  2. 使用UserService继承的ServiceImpl类中的方法，更新listAllUserInfo方法
+
+     ```java
+         //实现查询返回有数据
+         @GetMapping
+         public List<User> listAllUserInfo()
+         {
+             return userService.list();
+         }
+     ```
+
+  3. 使用UserService继承的ServiceImpl类中的方法，更新deleteUserInfoById方法
+
+     ```java
+         //实现删除特定ID数据
+         @DeleteMapping("/{id}")
+         public boolean deleteUserInfoById(@PathVariable Integer id)
+         {
+             return userService.removeById(id);
+         }
+     ```
+
+  4. 使用UserService继承的ServiceImpl类中的方法，更新findPage方法
+
+     ```java
+     //实现分页查询-MyBatisPlus实现
+     @GetMapping("/page") 
+     public IPage<User> findPage(@RequestParam Integer pageNumber,
+                                 @RequestParam Integer pageSize,
+                                 @RequestParam String username)
+     {
+         IPage<User> page = new Page<>(pageNumber, pageSize);
+         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+         queryWrapper.like("username", username);    //模糊搜索
+         return userService.page(page,queryWrapper);
+     }
+     ```
+
+  5. 对findPage方法进行拓展。使用__queryWrapper.like()__添加所需要搜索的词条种类，则能实现多词条的AND搜索，即得到的结果为同时满足所有条件的记录。AND方法为默认方法，该方法等于__queryWrapper.and().like()__
+
+     ```java
+     //实现分页查询-MyBatisPlus实现
+     @GetMapping("/page")  
+     public IPage<User> findPage(@RequestParam Integer pageNumber,
+                                 @RequestParam Integer pageSize,
+                                 @RequestParam String username,
+                                 @RequestParam String nickname,
+                                 @RequestParam String address)
+     {
+         IPage<User> page = new Page<>(pageNumber, pageSize);
+         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+         queryWrapper.like("username", username);    //模糊搜索
+         queryWrapper.like("nickname", nickname);
+         queryWrapper.like("address", address);      //增加搜索词条种类，则能实现多词条的AND搜索，即得到的结果为同时满足所有条件的记录
+     
+         return userService.page(page,queryWrapper);
+     }
+     ```
+
+  6. 对findPage方法进一步进行拓展。使用__queryWrapper.or().like()__添加所需要搜索的词条种类，则能实现多词条的OR搜索，即得到的结果为任意满足or()方法或同时满足所有默认方法的记录
+
+     ```java
+     //    queryWrapper.or().like("address", address);
+     ```
+
+  7. 优化方法，在类参数表内加入默认值设置，并添加是否为空判断逻辑。以便当不对某项值进行限定时，即返回空值时也能正常依据其他传入参数搜索
+
+     ```java
+         //实现分页查询-MyBatisPlus实现
+         @GetMapping("/page")
+         public IPage<User> findPage(@RequestParam Integer pageNumber,
+                                     @RequestParam Integer pageSize,
+                                     @RequestParam(required = false, defaultValue = "") String username,
+                                     @RequestParam(required = false, defaultValue = "") String nickname,
+                                     @RequestParam(required = false, defaultValue = "") String address)
+                                     //在类参数表内加入默认值设置，以便当不对某项值进行限定时，即返回空值时也能正常依据其他传入参数搜索
+         {
+             IPage<User> page = new Page<>(pageNumber, pageSize);
+             QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+             if (!"".equals(username))
+             {
+                 queryWrapper.like("username", username);
+             }
+             if (!"".equals(nickname))
+             {
+                 queryWrapper.like("nickname", nickname);
+             }
+             if (!"".equals(address))
+             {
+                 queryWrapper.like("address", address);
+             }
+     //      queryWrapper.or().like("address", address);
+             
+             return userService.page(page, queryWrapper);
+         }
+     ```
+
+  8. 将UserMapper的注入注解删除，便可正常运行
+
+     ```java
+     //    @Autowired
+     //    private UserMapper userMapper;
+     ```
+
++ ## ___com.toland.springboot.entity	User.java___
+
+  1. 在类前加注解___@TableName___用于指定对应数据库中查询的表名。
+
+     ```java
+     @Data
+     @TableName(value = "user_info")
+     public class User
+     {
+        ...
+     }
+     ```
+  
+  2. 在id前加注解___@TableId___用于标识表的主键。此时这个被注解的变量的名字则可以任意变化，而仍能使其对应与数据库中的id键，假如此时将声明的变量id变为userid，加上这条注解使用效果没有变化。
+  
+     ```java
+     @TableId(value = "id")
+     private Integer id;
+     ```
+  
+  3. 在任意键值前使用注解___@TableField___用以对非主键实现类似第2条中的前半部分功能。例如这个avatar的声明，在postman中的json串前的词条标识，可只用avatar来对应数据库中的avatar_url词条。下半部分代码为POST的json串。
+  
+     ```java
+     @TableField(value = "avatar_url")//数据库中的字段名称
+     private String avatar;//该字段在项目中的别名
+     ```
+  
+        ```json
+        {
+            "userid":1,
+            "avatar":"123123"
+        }
+        ```
+  
+  4. 假如即便不使用___@TableField___这个注解，MyBatisPlus也会将驼峰自动与下划线进行转换，用如下形式的代码传入如下的json串同样可映射avatar_url这个字段
+  
+     ```java
+     //@TableField(value = "avatar_url")//数据库中的字段名称
+     private String avatarUrl;//该字段在项目中的别名
+     ```
+
+        ```json
+        {
+            "userid":1,
+            "avatarUrl":"123123"
+        }
+        ```
+
++ ## ___使用Swagger-UI___
+
+  1. 在pom.xml依赖配置
+
+     ```xml
+             <!--swagger-->
+             <dependency>
+                 <groupId>io.springfox</groupId>
+                 <artifactId>springfox-boot-starter</artifactId>
+                 <version>3.0.0</version>
+             </dependency>
+     ```
+
+  2. 在创建好___SwaggerConfig.java___之后访问http://localhost:9090/swagger-ui/index.html即可进入Swagger-UI主页调试接口（具体地址和端口需要因地制宜）
+
++ ## ___com.toland.springboot.config	SwaggerConfig.java___
+
+  1. 新建___SwaggerConfig.java___作为Swagger的配置类
+
+     ```java
+     package com.toland.springboot.config;
+     
+     import org.springframework.context.annotation.Bean;
+     import org.springframework.context.annotation.Configuration;
+     import springfox.documentation.builders.ApiInfoBuilder;
+     import springfox.documentation.builders.PathSelectors;
+     import springfox.documentation.builders.RequestHandlerSelectors;
+     import springfox.documentation.service.ApiInfo;
+     import springfox.documentation.service.Contact;
+     import springfox.documentation.spi.DocumentationType;
+     import springfox.documentation.spring.web.plugins.Docket;
+     import springfox.documentation.oas.annotations.EnableOpenApi;
+     
+     @EnableOpenApi
+     @Configuration
+     public class SwaggerConfig
+     {
+     
+         /**
+          * 创建API应用
+          * apiInfo() 增加API相关信息
+          * 通过select()函数返回一个ApiSelectorBuilder实例,用来控制哪些接口暴露给Swagger来展现，
+          * 本例采用指定扫描的包路径来定义指定要建立API的目录。
+          */
+     
+         @Bean
+         public Docket restApi()
+         {
+             return new Docket(DocumentationType.SWAGGER_2)
+                     .groupName("Standard Interface")
+                     .apiInfo(apiInfo("Spring Boot-Vue Study Project Interface test APIs", "1.0"))
+                     .useDefaultResponseMessages(true)
+                     .forCodeGeneration(false)
+                     .select()
+                     .apis(RequestHandlerSelectors.basePackage("com.toland.springboot.controller"))
+                     .paths(PathSelectors.any())
+                     .build();
+         }
+     
+         /**
+          * 创建该API的基本信息（这些基本信息会展现在文档页面中）
+          * 访问地址：http://localhost:9090/swagger-ui/index.html
+          */
+         private ApiInfo apiInfo(String title, String version)
+         {
+             return new ApiInfoBuilder()
+                     .title(title)
+                     .description("")
+                     .termsOfServiceUrl("https://github.com/To1and/SpringBoot-Vue")
+                     .contact(new Contact("Toland", "https://github.com/To1and", "zyzytoland@gmail.com"))
+                     .version(version)
+                     .build();
+         }
+     }
+     ```
+

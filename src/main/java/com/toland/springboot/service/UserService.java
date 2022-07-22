@@ -1,25 +1,12 @@
 package com.toland.springboot.service;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.toland.springboot.entity.User;
 import com.toland.springboot.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService
+public class UserService extends ServiceImpl<UserMapper, User>
 {
-    @Autowired
-    private UserMapper userMapper;
 
-    public int save(User user)
-    {
-        if (user.getId() == null)
-        {
-            return userMapper.insert(user);
-        }
-        else
-        {
-            return userMapper.update(user);
-        }
-    }
 }
