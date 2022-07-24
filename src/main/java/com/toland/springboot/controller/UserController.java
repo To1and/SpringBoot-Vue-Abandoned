@@ -1,94 +1,96 @@
 package com.toland.springboot.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.toland.springboot.entity.User;
-import com.toland.springboot.mapper.UserMapper;
-import com.toland.springboot.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import javax.annotation.Resource;
+import java.util.List;
+import com.toland.springboot.service.IUserService;
+import com.toland.springboot.entity.User;
 
-import java.util.*;
+
+/**
+ * <p>
+ *  前端控制器
+ * </p>
+ *
+ * @author Toland
+ * @since 2022-07-24
+ */
+
 
 @RestController
+
 @RequestMapping("/user")
 public class UserController
 {
-    @Autowired
-    private UserService userService;
+
+    @Resource
+    private IUserService userService;
 
     //实现新增或者更新数据
     @PostMapping
-    public boolean saveOrUpdateUserInfo(@RequestBody User user)
+    public boolean saveOrUpdateInfo(@RequestBody User user)
     {
         return userService.saveOrUpdate(user);
     }
 
-
     //实现查询返回有数据
     @GetMapping
-    public List<User> listAllUserInfo()
+    public List<User> listAllInfo()
     {
         return userService.list();
     }
 
-
-    //实现删除特定ID数据
-    @DeleteMapping("/{id}")
-    public boolean deleteUserInfoById(@PathVariable Integer id)
+    //实现根据ID删除单个条目
+    @DeleteMapping("/del/{id}")
+    public boolean removeInfoById(@PathVariable Integer id)
     {
         return userService.removeById(id);
     }
 
-
-    //实现分页查询-MyBatisPlus实现
-    @GetMapping("/page")
-    public IPage<User> findPage(@RequestParam Integer pageNumber,
-                                @RequestParam Integer pageSize,
-                                @RequestParam(required = false, defaultValue = "") String username,
-                                @RequestParam(required = false, defaultValue = "") String nickname,
-                                @RequestParam(required = false, defaultValue = "") String address)
-                                //在类参数表内加入默认值设置，以便当不对某项值进行限定时，即返回空值时也能正常依据其他传入参数搜索
+    //实现根据多个ID删除多个条目
+    @DeleteMapping("/del/batch")
+    public boolean removeInfoByIds(@PathVariable List<Integer> ids)
     {
-        IPage<User> page = new Page<>(pageNumber, pageSize);
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        return userService.removeByIds(ids);
+    }
+
+    //实现根据ID查询唯一条目
+    @GetMapping("/get/{id}")
+    public User getOneInfoById(@PathVariable Integer id)
+    {
+        return userService.getById(id);
+    }
+
+    //实现基础分页查询
+    @GetMapping("/page")
+    public Page<User> findPage(@RequestParam Integer pageNumber,
+                                    @RequestParam Integer pageSize,
+                                    @RequestParam(required = false, defaultValue = "") String username,
+                                    @RequestParam(required = false, defaultValue = "") String nickname,
+                                    @RequestParam(required = false, defaultValue = "") String address)
+    {
+        QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+
+        //此处为自定义添加的限定搜索方法
         if (!"".equals(username))
         {
-            queryWrapper.like("username", username);
+        queryWrapper.like("username", username);
         }
         if (!"".equals(nickname))
         {
-            queryWrapper.like("nickname", nickname);
+        queryWrapper.like("nickname", nickname);
         }
         if (!"".equals(address))
         {
-            queryWrapper.like("address", address);
+        queryWrapper.like("address", address);
         }
 //      queryWrapper.or().like("address", address);
 
-        return userService.page(page, queryWrapper);
+        queryWrapper.orderByDesc("id");
+        return userService.page(new Page<>(pageNumber,pageSize),queryWrapper);
     }
-
-    //实现分页查询-MyBatis实现
-//    @GetMapping("/page")
-//    public Map<String, Object> findPage(@RequestParam Integer pageNumber,
-//    @RequestParam Integer pageSize,
-//    @RequestParam String username)
-//    {
-//        pageNumber = (pageNumber - 1) * pageSize;//limit的第一个参数 = (pageNumber - 1) * pageSize,其原理来源于MySQL语句
-//
-//        username="%"+username+"%";//实现模糊查询
-//
-//        List<User> data = userMapper.selectPage(pageNumber, pageSize,username);//获得查询信息
-//
-//        Integer total = userMapper.selectTotal(username);//获得总条目数量
-//
-//        Map<String, Object> res = new HashMap<>();
-//        res.put("data", data);
-//        res.put("total", total);
-//
-//        return res;
-//    }
 
 }

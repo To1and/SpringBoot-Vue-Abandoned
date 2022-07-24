@@ -5,53 +5,394 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328aa32b-114a-4df5-a143-28876d070d96" name="变更" comment="Spring Boot集成Mybatis-Plus和SwaggerUI">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_83.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webflux_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webmvc_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_6_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_6_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_6_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_6_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/utils/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/controller.java.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spring Boot WIKI.md" beforeDir="false" afterPath="$PROJECT_DIR$/Spring Boot WIKI.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringBoot-Vue Study Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-Vue Study Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toland/springboot/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/toland/springboot/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toland/springboot/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/User.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/toland/springboot/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/toland/springboot/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/toland/springboot/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/toland/springboot/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/toland/springboot/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/toland/springboot/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/toland/springboot/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/User.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/0dbadd05cc50a3e801b5ddb8a692a523.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/3722d470a3571342042df2434ea221ea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/3bf78ee267b87d8dd2c55a08665b57ef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/4752ae3e026139461029b671c5262afd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/48ccd5d347a4105445cd462319696c59.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/4da2af0525df8223541cd8a55517f913.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/4fbddc11ab549d70467e4d491b7e6e72.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/563c7503f5bce41928040f389b368031.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/5b53a50067018ce7d77072cba93d4421.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/6f69d2bebf5177506f2b349e89e947eb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/721cdccb9ab02b8af0bda0ce15aba953.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/786698f79d6ba204baacb27ec75a9edd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/79c93e332d31f53b11cf21172dbf325a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/7bd507175924206bcbf339e13b8b4f46.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/7cfa6922bb5e06227e8447742a023138.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/839e9cefcdfc9aeafd1acb3db57e8d83.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/86ecd87ce16f97f5dfa3a7010663bf68.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/8e2c7ade06285326806d94fc2b8dd1f1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/8ff3f51c1a146e73ad6f29458ffcf5ff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/963bef385540714292eb10de17a88b59.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/9de6a6956c58ec90bcd4881fd768f401.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/a0fc3495a352566f1fb8be0600bb1043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/a493e04099cd1f7a9e9c2becaf145c03.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/ab74c563edfb8447fc5aa3c529b2632e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/ae81e4d3746bf31e1435a5eb26596d55.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/c2702bbca74c1dc4726f90963ccd9ff0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/c5f9eae6e5c00c322e9ab6861a566f75.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/ca21417f9693a38bba812040838a7e7b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/cebeaa18f360c296648bc27d95e1acd9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/d31c8b85be7bad8c0409b4e63377a5ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/d64d6db52ec76c4e45c6cf0bbd6032a6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/e68ef721c6ae35c41f350aaa0841892c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/f6052d041c727f09f5bb53f289810d87.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/f6f385a432de918e40acbb07c95766b4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/babel-loader/fb4e07bb32173d13250b686c2d397b92.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/023cf7b7476a0b432026b899bbbd26e4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/0415cd9c2a8bd7f52c101638e8696886.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/061c1ce03e7d2d9ff81b69537b625d24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/069e29c8c6a3d0bbaffaed4e566f84cd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/06aec4b1f82efcb8ec7ed07c86147389.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/07383e6b46e57e45601acf30630d63a9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/07dc9d353529956d27308c0905ea9201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/0bfec9a5eb4f79ff0b54af3017effa3b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/10d53f5630f096f39c6df49fa53497a7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/11f5974e855d5eca8484eb189c2ab7cf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/129d55ddbd794aab96fc6a644dd89847.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/12c2a04a52001d44385f60322f8947f3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/169c836ba1839f3c4e39a9266bd67371.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/17656ae6a6074785ea3081feffc189b1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/18c907fd133a8919214a7c05cdb0cefb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/19dfa7173373b40d390f2da4dab0954d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/1a32a5f2e6a0d9caac7b813bf0a39a6c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/2818eade1a1c2a51ce5c149a37ec0fa6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/288d381c8a4bd21db2b3dfd1aa57c6bb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/292518f6ab188d006d7d065089223f1b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/2947aa39dcd62ba18e929a4e55ddb695.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/2e726a190c62ac17340dc9c43f9d66aa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/31fcd327a47e68ed4f024581c3528d19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/338af42d0ccd6f28e5afc89a136f8d99.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/37477245aca970109cedc003a6d8fb6b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/39780d00aa7801f708c98ace2e0ef25d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/3af053e9296d6e69a28b4029169cefc2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/3cf59042451af57cf079dfd6e6eece08.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/4545c06cafc4b56eb71fd6dae39b7d69.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/463f813fefc3e592693eb773e018217c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/4aab0aae6908468f785db1c2e4ba4f4b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/4ce492776a02627bbaed8649343c4ee2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/4e38fa54a5a3e65d3076f9665457a7bb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/50372294ea3892ae73008d41a4c17270.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/5102c832351a0046dd5d63a44f4a341b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/5297922a03f26e4f198d3102be14c8e0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/532592fe987ae47871dd0978604d7155.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/5772788e46df1ed86f0e6e785e27edfa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/5a064c187955fb3681427972a84ac657.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/5ab83956c2534000a710ad5e0f4a7af7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/5abd06a7db1032acddd949d1893deb1f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/6176f59397a7b298ba1576e0cc0062fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/641a83bef64ddbb07a2b9387bfeb7544.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/64fe6d50cc1fb859867d4cd507467247.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/669e91e9ae58c5ff86fc69e78b2810e5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/686b1158626681c3d2bcf5e984ee79f1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/695481b5dacbc1157681f4b6c706374f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/69b9c21bd1b647ea7d886d22791ee1c9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/6cba5385ff2831a751aaf68101052d8e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/6ea2d0206722e1ffd43796cd1ae0ac7c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/6ec875db3485361e5505d86af8c8992d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/734442555688009695790b7af63a726a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/73a589362d098a036d72cd435a59b7fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/76116c35dfe1ea8d63474eea6b77ba28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/76579c15b1306ecada45ed7e5d6ce8ea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/76ae82e0ba3409cbeebbe1979c84f8c3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/770bddece81698714846f1ebe4264df0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/7a23b9d39fb947331c0d5808c8c0330f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/81268e756a4271780b5b2cb444577e19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/81eeedf195826c62f3a1c6fce0c318ea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/82fae6dbc98fa74875fafc8b8e399859.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/870c59b734dfdb2a87d05699bc9619d9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/874bae5ae989ee1ee402558fafb18afd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/88c0f4a7d2e8edfda78154dfe583df82.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/895bf7d054fb691991130ca8a672b994.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/8a0b1b92483c5c956180256597a46211.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/8af629a1349a80ac5b65854000a94e6b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/91aaa4a2f5e95bb0b02f84103d774b52.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/94802174ff86cc9f96bf6597a1988c5f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/979f611da07a6f771573c7e22c52516b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/9e724645b8928d471aba3d70c5897f5a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/9ee9bcea1e74e45fa2519806dc23e1cf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/a0133633101bae6a95ff4ee092ae09d5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/a027840ceddd8af945297ed437665552.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/a07fb6a6ea9fdb31a5ad91332befd11c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/a3394745f05cda802597d8fc887a6713.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/a380627963524ec4fbd55b721e43e240.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/a4afe322b665b35c7d03e7f5e9abadc9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/abf0020f9e4a24297e1fc8cff9100f64.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/aea2c175271a7052ff01f269821b8a05.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/af894c5c9e0c9f1520fbc92e502f1e17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/afb52ff8101dfb57054217590bb5be2b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/afed3c3f1e80f6fb35434ed73c5a726d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b03531830c4ea41a4800fdfdfe38bffb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b0d4a4681328be6e8ab8d523ce236c56.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b4cb0574708ba64f89e3c965b2c5f5ed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b587661cc81dea8638bee0af7a17fff7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b60ae9d0b302fa2ad734f47dce63aff0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b66b317aabbf5ff21732f6507eee453b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/b8bd09a49a0691520df42d0ed1b295ea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/bbfb92c3511db5ca0748fd8295e930bb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/bc0222997e35cfe90dcd36aa58976aae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/bd471fde403190cd32043befd0f01d83.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/bd4a96290fa6b0867a7703bcc5ef81cf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/bfb82bdadda8eb0ff9517e9b368bff3b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c35ecf3bc0a34b1f98c8874d1e60c2ec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c461b55ffb669afbc5fdeec4c6c9e8e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c4685543b12018f300474fa03b44e124.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c48012ab4da109edccf83ff7bbb3f282.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c5ec55eae3f459dde1d1e23dce94e761.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c6162843cf8386f0535d3d3aea3956e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c7e416c2cf3a70e0c957c3d64b19b5da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c85006165a9a7db025b324597b6b3180.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/c89b30bbf615bed346abf54fc895ecc7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/cb4cc79db2772a65ceb55832c168db8b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/cb763509a523ca168050be8f95cbd9ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/cc9c35bef0b78301bf7bfd7c453b2000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ccac3d617464fe6e8a8d0ea90bfe9a5d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/cd9c5d6b70735ff1df5cd179c7731c17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ce3e92f33bda034feb86ac4a80a9933c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ce51786552072a9e563dc94077e9b861.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/cefee5b02cb8d4ff961c9a3b04e3d196.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/d150d3a7f166141292d30e2ab95e09e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/d1ea2c8098fa8cd2975331a827ac20fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/d5aca9eee74a82109500c0c461226ec0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/dad057d9dec9546068db057267ef9b7e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/db5b0cd6aaef783b7d746cbe2dc2f206.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/dbae169f231f002b1bc6845222da7cad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e05c60727ed0277826de1174f690fed0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e0e60f73a04741b231e54057da378962.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e1644b475b4c7f1300c0ae9e4c88267b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e6c630295ac14fd55eb13ef81b4f874f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e8af528c355b13d0564305b05cd33979.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e9795a7c35008fbceba52bf079e2712d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/e97a54acb38d177204115d64b7811408.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ea60c382fbf42e8f0798ce95af218aa2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ebf2aff69362857e047293214dd94ca5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ec8106d01df8164d40feb0484ce4a046.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/ee8bf0140ef8629647882008ce5e7ccf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/f462355af86ea89b9c30b428ad140204.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/f6f5ac82f0d3c0239c553a40ae7ca92e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/f76d41e2bc5b495688e0482c4381afdb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/f9ab42c7223d93ff8287dfda494c2655.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/fa7c7d88c185507a31ce587b2ed8bcf3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.cache/vue-loader/fb7e1d3e76665735bf3eb3617bc915a7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.en-US.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.en-US.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.es.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.es.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.fr-FR.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.fr-FR.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.zh-CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/CHANGELOG.zh-CN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/aside.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/aside.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/autocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/avatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/backtop.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/backtop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/badge.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/badge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/breadcrumb-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/breadcrumb-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/breadcrumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/button-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/button-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/carousel-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/carousel-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/cascader-panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/cascader-panel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/cascader.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/cascader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/checkbox-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/checkbox-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/checkbox-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/checkbox-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/checkbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/col.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/col.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/collapse-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/collapse-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/collapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/date-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/date-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/descriptions-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/descriptions-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/descriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/descriptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/divider.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/divider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dropdown-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dropdown-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dropdown-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dropdown-menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/element-ui.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/element-ui.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/empty.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/empty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/form-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/form-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/infinite-scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/infinite-scroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/input-number.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/input-number.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/locale/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/locale/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/locale/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/locale/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/menu-item-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/menu-item-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/menu-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/menu-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/message-box.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/message-box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/notification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/option-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/option-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/page-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/page-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/popconfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/popconfirm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/popover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/radio-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/radio-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/radio-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/radio-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/rate.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/rate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/row.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/scrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/scrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/skeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/skeleton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/step.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/steps.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/steps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/submenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/submenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tab-pane.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tab-pane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/table-column.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/table-column.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/autocomplete.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/autocomplete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/cascader-panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/cascader-panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/cascader.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/cascader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/checkbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/col.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/col.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/collapse.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/collapse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/color-picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/color-picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/date-picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/date-picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/descriptions-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/descriptions-item.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/descriptions.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/descriptions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/drawer.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/drawer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/input-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/input-number.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/message-box.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/message-box.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/popover.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/popover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/radio.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/radio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/select.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/step.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/step.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/table-column.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/table-column.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/time-picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/time-picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/time-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/time-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/transfer.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/transfer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/upload.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/theme-chalk/upload.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/time-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/time-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/time-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/time-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/timeline-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/timeline-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/transfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/umd/locale/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/umd/locale/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/umd/locale/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/umd/locale/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/utils/resize-event.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/lib/utils/resize-event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/badge/src/main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/badge/src/main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/button/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/button/src/button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/cascader-panel/src/cascader-panel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/cascader-panel/src/cascader-panel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/cascader/src/cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/cascader/src/cascader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/date-picker/src/basic/time-spinner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/date-picker/src/basic/time-spinner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/date-picker/src/picker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/date-picker/src/picker.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/descriptions/src/descriptions-row.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/descriptions/src/descriptions-row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/form/src/form-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/form/src/form-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/form/src/form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/form/src/form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/input/src/input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/input/src/input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/select/src/select.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/select/src/select.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/switch/src/component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/switch/src/component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table-body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table-layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table-layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/table/src/table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/autocomplete.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/autocomplete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/cascader-panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/cascader-panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/cascader.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/cascader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/checkbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/col.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/col.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/collapse.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/collapse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/color-picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/color-picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/date-picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/date-picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/descriptions-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/descriptions-item.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/descriptions.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/descriptions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/drawer.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/drawer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/input-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/input-number.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/message-box.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/message-box.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/popover.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/popover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/radio.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/radio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/select.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/step.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/step.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/table-column.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/table-column.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/time-picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/time-picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/time-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/time-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/transfer.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/transfer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/upload.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/lib/upload.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/src/common/var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/src/common/var.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/src/descriptions-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/theme-chalk/src/descriptions-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/tooltip/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/packages/tooltip/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/src/locale/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/src/locale/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/src/locale/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/src/locale/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/node_modules/element-ui/src/utils/resize-event.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/node_modules/element-ui/src/utils/resize-event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/utils/request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,41 +434,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "spring.configuration.checksum": "79d866204d4a64387f430175eb493199",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/CodeSpace/SpringBoot-Vue Study Project/vue&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;79d866204d4a64387f430175eb493199&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\CodeSpace\SpringBoot-Vue Study Project\vue" />
+      <recent name="C:\CodeSpace\SpringBoot-Vue Study Project\src\main\resources\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\CodeSpace\SpringBoot-Vue Study Project\vue\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootVueStudyProjectApplication">
+  <component name="RunManager" selected="npm.serve">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.toland.springboot.utils.CodeGenerator" />
+      <module name="SpringBoot-Vue Study Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.toland.springboot.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootVueStudyProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="SpringBoot-Vue Study Project" />
@@ -149,7 +508,13 @@
     <list>
       <item itemvalue="npm.serve" />
       <item itemvalue="Spring Boot.SpringBootVueStudyProjectApplication" />
+      <item itemvalue="应用程序.CodeGenerator" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.CodeGenerator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -186,7 +551,13 @@
       <workItem from="1658594677371" duration="1184000" />
       <workItem from="1658595899645" duration="1036000" />
       <workItem from="1658596965811" duration="158000" />
-      <workItem from="1658597147222" duration="3130000" />
+      <workItem from="1658597147222" duration="3857000" />
+      <workItem from="1658631617159" duration="4024000" />
+      <workItem from="1658636181428" duration="487000" />
+      <workItem from="1658636737263" duration="4748000" />
+      <workItem from="1658641935624" duration="81000" />
+      <workItem from="1658642065418" duration="5523000" />
+      <workItem from="1658664216661" duration="1345000" />
     </task>
     <task id="LOCAL-00001" summary="Spring Boot集成MyBatis实现数据查询">
       <created>1658392147307</created>
@@ -300,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658499088766</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Spring Boot集成Mybatis-Plus和SwaggerUI">
+      <created>1658600559506</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658600559506</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

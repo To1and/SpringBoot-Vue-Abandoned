@@ -84,7 +84,7 @@
       @Mapper
       public interface UserMapper
       {
-          @Select("SELECT * FROM user_info")
+          @Select("SELECT * FROM sys_user")
           List<User> findAll();
       }
       ```
@@ -124,21 +124,21 @@
   1. 使用___@Insert___注解实现向数据库插入条目
 
      ```java
-     @Insert("INSERT INTO user_info(username,password,nickname,email,phone,address) VALUES (#{username}, #{password}, #{nickname},#{email}, #{phone}, #{address})")
+     @Insert("INSERT INTO sys_user(username,password,nickname,email,phone,address) VALUES (#{username}, #{password}, #{nickname},#{email}, #{phone}, #{address})")
      int insert(User user);
      ```
 
   2. ~~使用___@Update___注解实现对数据库条目的更新。~~其交互方式为使用Postman向localhost:9090/user POST一个json串，在id已知的情况下替换数据。但是这种情况会导致假如在只更新个别数据的时候，会使其他没有更新的数据被清除，逻辑不完善,使用动态SQL进行完善，最终会将@Update注解完全删除
 
      ```java
-     @Update("UPDATE user_info SET username=#{username}, password=#{password},nickname=#{nickname},email=#{email},phone=#{phone},address=#{address} WHERE id=#{id}")
+     @Update("UPDATE sys_user SET username=#{username}, password=#{password},nickname=#{nickname},email=#{email},phone=#{phone},address=#{address} WHERE id=#{id}")
      int update(User user);
      ```
 
   3. 使用@Delete注解实现通过id检索删除条目
 
      ```java
-     @Delete("DELETE FROM user_info WHERE id = #{id}")   //这个id与下一行的id一一对应
+     @Delete("DELETE FROM sys_user WHERE id = #{id}")   //这个id与下一行的id一一对应
      Integer deleteById(@Param("id") Integer id);
      ```
 
@@ -206,7 +206,7 @@
 
   	```xml
          <update id="update">
-             UPDATE user_info
+             UPDATE sys_user
              <set>
                  
                  <if test="username!=null">
@@ -301,14 +301,14 @@
   1. 使用@Select实现分页查询
 
      ```java
-     @Select("SELECT * FROM user_info LIMIT #{pageNumber},#{pageSize}")
+     @Select("SELECT * FROM sys_user LIMIT #{pageNumber},#{pageSize}")
      List<User> selectPage(Integer pageNumber,Integer pageSize);
      ```
 
   2. 使用@Select实现获取总条目数
 
      ```java
-     @Select("SELECT COUNT(*) FROM user_info")
+     @Select("SELECT COUNT(*) FROM sys_user")
      Integer selectTotal();
      ```
 
@@ -549,7 +549,7 @@
 
      ```java
      @Data
-     @TableName(value = "user_info")
+     @TableName(value = "sys_user")
      public class User
      {
         ...
@@ -667,3 +667,310 @@
      }
      ```
 
+---
+
+# VI. 代码生成器
+
++ ## 设置依赖
+
+  1. MyBatis Plus Generator
+
+     ```xml
+             <!--MyBatis Plus Generator-->
+             <dependency>
+                 <groupId>com.baomidou</groupId>
+                 <artifactId>mybatis-plus-generator</artifactId>
+                 <version>3.5.1</version>
+             </dependency>
+     ```
+
+  2. 引入模板引擎Velocity
+
+     ```xml
+         <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
+         <dependency>
+             <groupId>org.apache.velocity</groupId>
+             <artifactId>velocity-engine-core</artifactId>
+             <version>2.3</version>
+         </dependency>
+     </dependencies>
+     ```
+
++ ## ___com.toland.springboot.utils	CodeGenerator.java___
+
+  1. 编写配置代码生成器，这部分内容需要按需配置，我参考了MyBatisPlus给出的文档有如下设置
+
+     ```java
+     package com.toland.springboot.utils;
+     
+     //by Toland
+     
+     import com.baomidou.mybatisplus.generator.FastAutoGenerator;
+     import com.baomidou.mybatisplus.generator.config.OutputFile;
+     
+     import java.util.*;
+     
+     public class CodeGenerator
+     {
+         public static void main(String[] args)
+         {
+             gengerate();
+         }
+     
+         private static void gengerate()
+         {
+             FastAutoGenerator.create("jdbc:mysql://localhost:3306/testdb?serverTimezone=GMT%2b8", "toland", "990315")
+                     .globalConfig(builder ->
+                                   {
+                                       builder.author("Toland") // 设置作者
+                                               .enableSwagger() // 开启 swagger 模式
+                                               .fileOverride() // 覆盖已生成文件
+                                               .disableOpenDir() //不打开生成目录
+                                               .outputDir(
+                                                       "C:\\CodeSpace\\SpringBoot-Vue Study Project\\src\\main\\java\\"); // 指定输出目录
+                                   })
+                     .packageConfig(builder ->
+                                    {
+                                        builder.parent("com.toland.springboot") // 设置父包名
+                                                .moduleName(null) // 设置父包模块名
+                                                .pathInfo(Collections.singletonMap(OutputFile.mapperXml,
+                                                                                   "C:\\CodeSpace\\SpringBoot-Vue Study Project\\src\\main\\resources\\mapper\\")); // 设置mapperXml生成路径
+                                    })
+                     .strategyConfig(builder ->
+                                     {
+                                         builder.addInclude("sys_user") // 设置需要生成的表名
+                                                 .addTablePrefix("t_", "sys_") // 设置过滤表前缀
+                                                 .entityBuilder().enableLombok() //开启 lombok 模型
+                                                 .controllerBuilder().enableRestStyle()  //开启生成@RestController控制器
+                                                                     .enableHyphenStyle() //开启驼峰转连字符
+                                                 .mapperBuilder().enableMapperAnnotation(); //开启 @Mapper 注解
+     
+                                     })
+                     .execute();
+         }
+     }
+     
+     ```
+
+  2. 运行该主函数，生成成功后删除原有项目里面没有被覆盖掉的的所有方法
+
+  3. 在外部库中找到___com\baomidou\mybatis-plus-generator\3.5.1\mybatis-plus-generator-3.5.1.jar!\templates\controller.java.vm___，并将其复制到___src/main/resources/templates___中进行修改，移植生成代码前___UserController___中的方法，此为生成**UserController**类的模板。这部分代码生成非常繁琐和复杂，有大量需要精细化修改的地方，为了获得满意的效果花了我两个多小时小时，这个模板可以直接生成一个附带一些基础方法的Controller。
+
+     ```java
+     package ${package.Controller};
+     
+     import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+     import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+     import org.springframework.stereotype.Controller;
+     import org.springframework.web.bind.annotation.*;
+     import javax.annotation.Resource;
+     import java.util.List;
+     import $!{package.Service}.$!{table.serviceName};
+     import ${package.Entity}.${entity};
+     
+     #if(${superControllerClassPackage})
+     import ${superControllerClassPackage};
+     #end
+     
+     /**
+      * <p>
+      * $!{table.comment} 前端控制器
+      * </p>
+      *
+      * @author ${author}
+      * @since ${date}
+      */
+     
+     
+     #if(${restControllerStyle})
+     @RestController
+     #else
+     @Controller
+     #end
+     @RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+     #if(${kotlin})
+     class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+     
+     #else
+         #if(${superControllerClass})
+     public class ${table.controllerName} extends ${superControllerClass}
+     {
+         #else
+     public class ${table.controllerName}
+     {
+         #end
+     
+         @Resource
+         private ${table.serviceName} ${table.entityPath}Service;
+     
+         //实现新增或者更新数据
+         @PostMapping
+         public boolean saveOrUpdateInfo(@RequestBody ${entity} ${table.entityPath})
+         {
+             return ${table.entityPath}Service.saveOrUpdate(${table.entityPath});
+         }
+     
+         //实现查询返回有数据
+         @GetMapping
+         public List<${entity}> listAllInfo()
+         {
+             return ${table.entityPath}Service.list();
+         }
+     
+         //实现根据ID删除单个条目
+         @DeleteMapping("/del/{id}")
+         public boolean removeInfoById(@PathVariable Integer id)
+         {
+             return ${table.entityPath}Service.removeById(id);
+         }
+     
+         //实现根据多个ID删除多个条目
+         @DeleteMapping("/del/batch")
+         public boolean removeInfoByIds(@PathVariable List<Integer> ids)
+         {
+             return ${table.entityPath}Service.removeByIds(ids);
+         }
+     
+         //实现根据ID查询唯一条目
+         @GetMapping("/get/{id}")
+         public ${entity} getOneInfoById(@PathVariable Integer id)
+         {
+             return ${table.entityPath}Service.getById(id);
+         }
+     
+         //实现基础分页查询
+         @GetMapping("/page")
+         public Page<${entity}> findPage(@RequestParam Integer pageNumber,
+                                         @RequestParam Integer pageSize,
+                                         @RequestParam(required = false, defaultValue = "") String username,
+                                         @RequestParam(required = false, defaultValue = "") String nickname,
+                                         @RequestParam(required = false, defaultValue = "") String address)
+         {
+             QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+     
+             //此处为自定义添加的限定搜索方法
+             if (!"".equals(username))
+             {
+             queryWrapper.like("username", username);
+             }
+             if (!"".equals(nickname))
+             {
+             queryWrapper.like("nickname", nickname);
+             }
+             if (!"".equals(address))
+             {
+             queryWrapper.like("address", address);
+             }
+     //      queryWrapper.or().like("address", address);
+     
+             queryWrapper.orderByDesc("id");
+             return ${table.entityPath}Service.page(new Page<>(pageNumber,pageSize),queryWrapper);
+         }
+     
+     }
+     #end
+     ```
+
++ ## ___com.toland.springboot.Controller	UserController.java___
+
+  1. 此时检查完全自动生成的代码，实现了之前手写的代码的功能。其他的各种接口和实体类也被覆盖，这里不再列出
+
+     ```java
+     package com.toland.springboot.controller;
+     
+     import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+     import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+     import org.springframework.stereotype.Controller;
+     import org.springframework.web.bind.annotation.*;
+     import javax.annotation.Resource;
+     import java.util.List;
+     import com.toland.springboot.service.IUserService;
+     import com.toland.springboot.entity.User;
+     
+     
+     /**
+      * <p>
+      *  前端控制器
+      * </p>
+      *
+      * @author Toland
+      * @since 2022-07-24
+      */
+     
+     
+     @RestController
+     
+     @RequestMapping("/user")
+     public class UserController
+     {
+     
+         @Resource
+         private IUserService userService;
+     
+         //实现新增或者更新数据
+         @PostMapping
+         public boolean saveOrUpdateInfo(@RequestBody User user)
+         {
+             return userService.saveOrUpdate(user);
+         }
+     
+         //实现查询返回有数据
+         @GetMapping
+         public List<User> listAllInfo()
+         {
+             return userService.list();
+         }
+     
+         //实现根据ID删除单个条目
+         @DeleteMapping("/del/{id}")
+         public boolean removeInfoById(@PathVariable Integer id)
+         {
+             return userService.removeById(id);
+         }
+     
+         //实现根据多个ID删除多个条目
+         @DeleteMapping("/del/batch")
+         public boolean removeInfoByIds(@PathVariable List<Integer> ids)
+         {
+             return userService.removeByIds(ids);
+         }
+     
+         //实现根据ID查询唯一条目
+         @GetMapping("/get/{id}")
+         public User getOneInfoById(@PathVariable Integer id)
+         {
+             return userService.getById(id);
+         }
+     
+         //实现基础分页查询
+         @GetMapping("/page")
+         public Page<User> findPage(@RequestParam Integer pageNumber,
+                                         @RequestParam Integer pageSize,
+                                         @RequestParam(required = false, defaultValue = "") String username,
+                                         @RequestParam(required = false, defaultValue = "") String nickname,
+                                         @RequestParam(required = false, defaultValue = "") String address)
+         {
+             QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+     
+             //此处为自定义添加的限定搜索方法
+             if (!"".equals(username))
+             {
+             queryWrapper.like("username", username);
+             }
+             if (!"".equals(nickname))
+             {
+             queryWrapper.like("nickname", nickname);
+             }
+             if (!"".equals(address))
+             {
+             queryWrapper.like("address", address);
+             }
+     //      queryWrapper.or().like("address", address);
+     
+             queryWrapper.orderByDesc("id");
+             return userService.page(new Page<>(pageNumber,pageSize),queryWrapper);
+         }
+     
+     }
+     
+     ```
